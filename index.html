@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>友近・落合 チーム実績</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="第1回GMOロボットハンドコンテストに応募する友近武史・落合大輔の開発実績と、ロボット・電子工作への取り組み。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+JP:wght@400;500;700&family=Zen+Kaku+Gothic+New:wght@700;900&display=swap">
+<style>
+/* 書類審査向けの1ページ。広い画面では2名を並列に表示。 */
+:root {
+  color-scheme: light;
+  --bg: #f3f5f7;
+  --surface: #ffffff;
+  --fg: #182029;
+  --muted: #5a6673;
+  --line: #d9dfe5;
+  --accent: #1f5fd6;
+  --display: "Zen Kaku Gothic New", "Hiragino Sans", "Yu Gothic", sans-serif;
+  --body: "IBM Plex Sans JP", "Hiragino Sans", "Yu Gothic", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #11161c; --surface: #19202a; --fg: #e6ebf0; --muted: #98a4b1;
+    --line: #2b3542; --accent: #7aa7ff; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #11161c; --surface: #19202a; --fg: #e6ebf0; --muted: #98a4b1;
+  --line: #2b3542; --accent: #7aa7ff; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg); color: var(--fg);
+  font-family: var(--body); font-size: 15px; line-height: 1.8;
+}
+.wrap {
+  max-width: 920px; margin: 0 auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 48px 64px;
+  display: grid; gap: 32px;
+}
+a { color: var(--accent); text-underline-offset: 3px; overflow-wrap: anywhere; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
+.label {
+  font-family: var(--mono); font-size: 12px; letter-spacing: .08em;
+  text-transform: uppercase; color: var(--muted);
+}
+h1, h2 { font-family: var(--display); margin: 0; text-wrap: balance; line-height: 1.35; }
+
+header { display: grid; gap: 10px; }
+.team-intro { margin: 0; color: var(--muted); font-size: 15px; }
+h1 { font-size: clamp(28px, 5vw, 40px); font-weight: 900; letter-spacing: .01em; }
+
+.members { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr)); gap: 20px; }
+.member {
+  background: var(--surface); border: 1px solid var(--line); border-radius: 10px;
+  padding: 24px; display: flex; flex-direction: column; gap: 16px; min-width: 0;
+}
+.member-head { display: grid; gap: 2px; }
+.member h2 { font-size: 26px; font-weight: 900; }
+.role { margin: 0; color: var(--muted); font-size: 14px; }
+.points { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; }
+.points li { position: relative; padding-left: 18px; }
+.points li::before {
+  content: ""; position: absolute; left: 0; top: .72em;
+  width: 8px; height: 2px; background: var(--accent);
+}
+.links { display: flex; flex-wrap: wrap; gap: 4px 16px; margin-top: auto; padding-top: 14px; border-top: 1px solid var(--line); font-family: var(--mono); font-size: 13px; }
+.name { display: inline-block; }
+.points { gap: 18px; }
+.points h3 { margin: 0 0 4px; font-size: 16px; line-height: 1.6; }
+.points p { margin: 0; }
+.status { display: inline-block; margin-left: 8px; padding: 1px 7px; border: 1px solid currentColor; border-radius: 4px; font-size: 11px; font-weight: 500; color: var(--muted); vertical-align: middle; white-space: nowrap; }
+.status--business { color: light-dark(#6b21a8, #d8b4fe); background: light-dark(#faf5ff, #30203f); }
+.status--experience { color: light-dark(#1e40af, #93c5fd); background: light-dark(#eff6ff, #1c2d48); }
+.status--ongoing { color: light-dark(#92400e, #fcd34d); background: light-dark(#fffbeb, #382b14); }
+.status--participation { color: light-dark(#115e59, #5eead4); background: light-dark(#f0fdfa, #173431); }
+.background { border-top: 1px solid var(--line); padding-top: 14px; }
+.background p { margin: 0 0 8px; font-size: 13px; color: var(--muted); }
+@media (max-width: 480px) {
+  .wrap { padding-block: 28px 40px; gap: 24px; }
+  .member { padding: 20px; }
+  .points h3 { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; }
+  .status { order: -1; margin-left: 0; }
+}
+@media print {
+  :root { --bg: #fff; --surface: #fff; --fg: #182029; --muted: #5a6673; --line: #d9dfe5; --accent: #1f5fd6; color-scheme: light; }
+  .wrap { max-width: none; padding: 0; gap: 18px; }
+  .members { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+  .member { padding: 16px; gap: 12px; }
+  body { font-size: 11px; }
+  h1 { font-size: 26px; }
+  .member h2 { font-size: 22px; }
+  .points { gap: 12px; }
+  .points h3 { font-size: 13px; }
+  .background p, .links { font-size: 10px; }
+  .member { break-inside: avoid; }
+  @page { size: A4; margin: 12mm; }
+}
+</style>
+</head>
+<body>
+
+<main class="wrap">
+  <header>
+    <span class="label">第1回 GMOロボットハンドコンテスト 応募資料</span>
+    <p class="team-intro">AI・アプリ開発と、ものづくりの経験を持つチーム</p>
+    <h1><span class="name">友近武史</span>・<span class="name">落合大輔</span><br>チーム実績</h1>
+  </header>
+
+  <section class="members" aria-label="メンバー">
+    <article class="member">
+      <div class="member-head">
+        <span class="label">Member 01</span>
+        <h2>友近 武史</h2>
+        <p class="role">ソフトウェア / AI / ロボットアーム</p>
+      </div>
+      <ul class="points">
+        <li>
+          <h3>べんサーonline<span class="status status--business">起業経験</span></h3>
+          <p>参加者同士で問題を教え合うオンライン学習サークルを立ち上げ・運営。教え合いと小テストを通じて、学習習慣の定着を支援。</p>
+        </li>
+        <li>
+          <h3>AIシステムの開発<span class="status status--experience">開発経験</span></h3>
+          <p>学生時代、AI受託開発企業で9ヶ月間の開発を経験。音声対話AI、RAGの音声処理・要約生成、図面のOCRシステムを開発。</p>
+        </li>
+        <li>
+          <h3>アプリ開発<span class="status status--experience">開発経験</span></h3>
+          <p>筋トレ記録SNS「PumpKin」の開発に携わる（App Store 公開中）。AIで球拾いなどの時間をカットし、プレー部分を残す卓球動画の自動編集アプリも開発中。</p>
+          <a href="https://apps.apple.com/jp/app/pumpkin/id6504126864">PumpKinをApp Storeで見る</a>
+        </li>
+        <li>
+          <h3>SO-101 ロボットアーム<span class="status status--ongoing">取り組み中</span></h3>
+          <p>SO-101 を使い、ロボットアームの操作・制御を学習中。</p>
+        </li>
+      </ul>
+      <div class="links">
+        <a href="https://github.com/tomochi3">GitHub</a>
+      </div>
+    </article>
+
+    <article class="member">
+      <div class="member-head">
+        <span class="label">Member 02</span>
+        <h2>落合 大輔</h2>
+        <p class="role">ソフトウェア / ものづくり</p>
+      </div>
+      <ul class="points">
+        <li>
+          <h3>ものづくり団体の共同創設<span class="status status--business">起業経験</span></h3>
+          <p>ものづくり系の学生団体を共同創設。京都で3Dプリント・プログラミング・レーザーカッターのワークショップを開催し、協力団体との関係づくりを担当。団体はその後、合同会社になった。</p>
+        </li>
+        <li>
+          <h3>ソフトウェア開発<span class="status status--experience">開発経験</span></h3>
+          <p>学生時代にWebサービス・メディア・気象情報などの企業5社で、ソフトウェア開発インターンを経験。</p>
+        </li>
+        <li>
+          <h3>電子工作キットの製作<span class="status status--ongoing">取り組み中</span></h3>
+          <p>PC用ゲームコントローラーの電子工作キット「ツッチーコントローラーMARK I」を組み立て中。はんだ付けやプログラミングを通じて、回路とマイコンを学習中。</p>
+        </li>
+        <li>
+          <h3>Humanoid Hack Tokyo<span class="status status--participation">参加経験</span></h3>
+          <p>渋谷のGMOヒューマノイドラボで開催された、ヒューマノイドロボットのハッカソン「Humanoid Hack Tokyo」に参加。</p>
+        </li>
+      </ul>
+      <div class="links">
+        <a href="https://www.linkedin.com/in/otty0507">LinkedIn</a>
+      </div>
+    </article>
+  </section>
+</main>
+</body>
+</html>
