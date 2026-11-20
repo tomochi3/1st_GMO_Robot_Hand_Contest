@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+JP:wght@400;500;700&family=Zen+Kaku+Gothic+New:wght@700;900&display=swap">
 <style>
-/* 書類審査向けの1ページ。広い画面では2名を並列に表示。 */
+/* 書類審査向けの1ページ。広い画面では3名を並列に表示。 */
 :root {
   color-scheme: light;
   --bg: #f3f5f7;
@@ -39,7 +39,7 @@ body {
   font-family: var(--body); font-size: 15px; line-height: 1.8;
 }
 .wrap {
-  max-width: 920px; margin: 0 auto;
+  max-width: 1240px; margin: 0 auto;
   padding-left: max(16px, env(safe-area-inset-left, 0px));
   padding-right: max(16px, env(safe-area-inset-right, 0px));
   padding-block: 48px 64px;
@@ -57,7 +57,7 @@ header { display: grid; gap: 10px; }
 .team-intro { margin: 0; color: var(--muted); font-size: 15px; }
 h1 { font-size: clamp(28px, 5vw, 40px); font-weight: 900; letter-spacing: .01em; }
 
-.members { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr)); gap: 20px; }
+.members { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: 20px; }
 .member {
   background: var(--surface); border: 1px solid var(--line); border-radius: 10px;
   padding: 24px; display: flex; flex-direction: column; gap: 16px; min-width: 0;
@@ -80,6 +80,7 @@ h1 { font-size: clamp(28px, 5vw, 40px); font-weight: 900; letter-spacing: .01em;
 .status--business { color: light-dark(#6b21a8, #d8b4fe); background: light-dark(#faf5ff, #30203f); }
 .status--experience { color: light-dark(#1e40af, #93c5fd); background: light-dark(#eff6ff, #1c2d48); }
 .status--ongoing { color: light-dark(#92400e, #fcd34d); background: light-dark(#fffbeb, #382b14); }
+.status--research { color: light-dark(#9d174d, #f9a8d4); background: light-dark(#fdf2f8, #3a1d2c); }
 .status--participation { color: light-dark(#115e59, #5eead4); background: light-dark(#f0fdfa, #173431); }
 .background { border-top: 1px solid var(--line); padding-top: 14px; }
 .background p { margin: 0 0 8px; font-size: 13px; color: var(--muted); }
@@ -92,7 +93,7 @@ h1 { font-size: clamp(28px, 5vw, 40px); font-weight: 900; letter-spacing: .01em;
 @media print {
   :root { --bg: #fff; --surface: #fff; --fg: #182029; --muted: #5a6673; --line: #d9dfe5; --accent: #1f5fd6; color-scheme: light; }
   .wrap { max-width: none; padding: 0; gap: 18px; }
-  .members { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+  .members { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
   .member { padding: 16px; gap: 12px; }
   body { font-size: 11px; }
   h1 { font-size: 26px; }
@@ -101,7 +102,7 @@ h1 { font-size: clamp(28px, 5vw, 40px); font-weight: 900; letter-spacing: .01em;
   .points h3 { font-size: 13px; }
   .background p, .links { font-size: 10px; }
   .member { break-inside: avoid; }
-  @page { size: A4; margin: 12mm; }
+  @page { size: A4 landscape; margin: 10mm; }
 }
 </style>
 </head>
@@ -178,21 +179,26 @@ h1 { font-size: clamp(28px, 5vw, 40px); font-weight: 900; letter-spacing: .01em;
       <div class="member-head">
         <span class="label">Member 03</span>
         <h2>有福 遼太郎</h2>
-        <p class="role">ロボットラーニング / AI / 事業開発</p>
+        <p class="role">ロボット学習 / AI / 事業開発</p>
       </div>
       <ul class="points">
         <li>
-          <h3>ロボットラーニングの研究<span class="status status--ongoing">取り組み中</span></h3>
-          <p>奈良先端科学技術大学院大学 ロボットラーニング研究室で、対話型模倣学習と安全性を研究。京都大学 工学部 情報学科ではTransformerの内部機構を分析。</p>
+          <h3>ロボットラーニングの研究<span class="status status--research">研究</span></h3>
+          <p>奈良先端科学技術大学院大学 情報領域のロボットラーニング研究室で、対話型模倣学習と安全性を研究。京都大学 工学部 情報学科では、Transformerの内部機構を分析する研究に取り組んだ。</p>
         </li>
         <li>
-          <h3>複数のスタートアップで従事<span class="status status--experience">開発経験</span></h3>
-          <p>Muso Action（ロボットAIエンジニア）、Rutilea（AIエンジニア）、SMARTCAMP（Web・AIエンジニア）、エムニ（営業全般からPM）。</p>
+          <h3>スタートアップでのAI開発<span class="status status--experience">開発経験</span></h3>
+          <p>学業と並行して複数のスタートアップに参画。Muso ActionでロボットAIエンジニア、RutileaでAIエンジニア、SMARTCAMPでWeb・AIエンジニアを務めた。</p>
+        </li>
+        <li>
+          <h3>エムニでの事業推進<span class="status status--business">事業経験</span></h3>
+          <p>営業全般からPMまでを担当。</p>
+        </li>
+        <li>
+          <h3>起業準備<span class="status status--ongoing">取り組み中</span></h3>
+          <p>経済産業省・NEDOの「NEP 開拓コース」と大学発スタートアップ支援補助金の支援プログラムで、起業に向けて活動中。</p>
         </li>
       </ul>
-      <div class="links">
-        <a href="arifuku.html">詳しいプロフィール</a>
-      </div>
     </article>
   </section>
 </main>
