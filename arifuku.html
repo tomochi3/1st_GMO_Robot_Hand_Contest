@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>有福遼太郎 実績</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="第1回GMOロボットハンドコンテストに応募するチームメンバー、有福遼太郎の研究・スタートアップでの実績。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+JP:wght@400;500;700&family=Zen+Kaku+Gothic+New:wght@700;900&display=swap">
+<style>
+/* チームメンバー（有福）の個別ページ。index.html と同じスタイル。 */
+:root {
+  color-scheme: light;
+  --bg: #f3f5f7;
+  --surface: #ffffff;
+  --fg: #182029;
+  --muted: #5a6673;
+  --line: #d9dfe5;
+  --accent: #1f5fd6;
+  --display: "Zen Kaku Gothic New", "Hiragino Sans", "Yu Gothic", sans-serif;
+  --body: "IBM Plex Sans JP", "Hiragino Sans", "Yu Gothic", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #11161c; --surface: #19202a; --fg: #e6ebf0; --muted: #98a4b1;
+    --line: #2b3542; --accent: #7aa7ff; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #11161c; --surface: #19202a; --fg: #e6ebf0; --muted: #98a4b1;
+  --line: #2b3542; --accent: #7aa7ff; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg); color: var(--fg);
+  font-family: var(--body); font-size: 15px; line-height: 1.8;
+}
+.wrap {
+  max-width: 920px; margin: 0 auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 48px 64px;
+  display: grid; gap: 32px;
+}
+a { color: var(--accent); text-underline-offset: 3px; overflow-wrap: anywhere; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
+.label {
+  font-family: var(--mono); font-size: 12px; letter-spacing: .08em;
+  text-transform: uppercase; color: var(--muted);
+}
+h1, h2 { font-family: var(--display); margin: 0; text-wrap: balance; line-height: 1.35; }
+
+header { display: grid; gap: 10px; }
+.team-intro { margin: 0; color: var(--muted); font-size: 15px; }
+h1 { font-size: clamp(28px, 5vw, 40px); font-weight: 900; letter-spacing: .01em; }
+
+.members { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr)); gap: 20px; }
+.member {
+  background: var(--surface); border: 1px solid var(--line); border-radius: 10px;
+  padding: 24px; display: flex; flex-direction: column; gap: 16px; min-width: 0;
+}
+.member-head { display: grid; gap: 2px; }
+.member h2 { font-size: 26px; font-weight: 900; }
+.role { margin: 0; color: var(--muted); font-size: 14px; }
+.points { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; }
+.points li { position: relative; padding-left: 18px; }
+.points li::before {
+  content: ""; position: absolute; left: 0; top: .72em;
+  width: 8px; height: 2px; background: var(--accent);
+}
+.links { display: flex; flex-wrap: wrap; gap: 4px 16px; margin-top: auto; padding-top: 14px; border-top: 1px solid var(--line); font-family: var(--mono); font-size: 13px; }
+.name { display: inline-block; }
+.points { gap: 18px; }
+.points h3 { margin: 0 0 4px; font-size: 16px; line-height: 1.6; }
+.points p { margin: 0; }
+.status { display: inline-block; margin-left: 8px; padding: 1px 7px; border: 1px solid currentColor; border-radius: 4px; font-size: 11px; font-weight: 500; color: var(--muted); vertical-align: middle; white-space: nowrap; }
+.status--business { color: light-dark(#6b21a8, #d8b4fe); background: light-dark(#faf5ff, #30203f); }
+.status--experience { color: light-dark(#1e40af, #93c5fd); background: light-dark(#eff6ff, #1c2d48); }
+.status--ongoing { color: light-dark(#92400e, #fcd34d); background: light-dark(#fffbeb, #382b14); }
+.status--participation { color: light-dark(#115e59, #5eead4); background: light-dark(#f0fdfa, #173431); }
+.background { border-top: 1px solid var(--line); padding-top: 14px; }
+.background p { margin: 0 0 8px; font-size: 13px; color: var(--muted); }
+@media (max-width: 480px) {
+  .wrap { padding-block: 28px 40px; gap: 24px; }
+  .member { padding: 20px; }
+  .points h3 { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; }
+  .status { order: -1; margin-left: 0; }
+}
+@media print {
+  :root { --bg: #fff; --surface: #fff; --fg: #182029; --muted: #5a6673; --line: #d9dfe5; --accent: #1f5fd6; color-scheme: light; }
+  .wrap { max-width: none; padding: 0; gap: 18px; }
+  .members { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+  .member { padding: 16px; gap: 12px; }
+  body { font-size: 11px; }
+  h1 { font-size: 26px; }
+  .member h2 { font-size: 22px; }
+  .points { gap: 12px; }
+  .points h3 { font-size: 13px; }
+  .background p, .links { font-size: 10px; }
+  .member { break-inside: avoid; }
+  @page { size: A4; margin: 12mm; }
+}
+.back { font-family: var(--mono); font-size: 13px; }
+.timeline { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 20px; }
+.year { font-family: var(--mono); font-size: 13px; color: var(--accent); font-weight: 500; }
+.tagline { margin: 0; font-weight: 700; }
+h3.section { margin: 0; font-size: 13px; font-family: var(--mono); letter-spacing: .08em; color: var(--muted); font-weight: 500; }
+</style>
+</head>
+<body>
+
+<main class="wrap">
+  <header>
+    <span class="label">第1回 GMOロボットハンドコンテスト 応募資料</span>
+    <a class="back" href="index.html">← チーム実績トップへ</a>
+    <p class="team-intro">ロボットとAIの社会実装＋研究開発に取り組む</p>
+    <h1>メンバー紹介</h1>
+  </header>
+
+  <section class="member" aria-label="有福遼太郎">
+    <div class="member-head">
+      <span class="label">Member 03</span>
+      <h2>有福 遼太郎</h2>
+      <p class="role">ロボットラーニング / AI / 事業開発</p>
+    </div>
+    <p class="tagline">学業と並行して、複数のスタートアップに参画してきた。</p>
+
+    <h3 class="section">研究</h3>
+    <div class="timeline">
+      <div>
+        <span class="year">2021–</span>
+        <p style="margin:0"><strong>京都大学 工学部 情報学科</strong></p>
+        <ul class="points">
+          <li><p>計算機科学 / 知能情報学</p></li>
+          <li><p>Transformerの内部機構を分析する研究</p></li>
+        </ul>
+      </div>
+      <div>
+        <span class="year">2025–</span>
+        <p style="margin:0"><strong>奈良先端科学技術大学院大学 情報領域</strong></p>
+        <ul class="points">
+          <li><p>ロボットラーニング研究室</p></li>
+          <li><p>対話型模倣学習と安全性の研究</p></li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 class="section">スタートアップでの従事</h3>
+    <ul class="points">
+      <li>
+        <h3>Muso Action<span class="status status--experience">開発経験</span></h3>
+        <p>ロボットAIエンジニアとして従事。</p>
+      </li>
+      <li>
+        <h3>Rutilea<span class="status status--experience">開発経験</span></h3>
+        <p>AIエンジニアとして従事。</p>
+      </li>
+      <li>
+        <h3>SMARTCAMP<span class="status status--experience">開発経験</span></h3>
+        <p>Web・AIエンジニアとして従事。</p>
+      </li>
+      <li>
+        <h3>エムニ<span class="status status--business">事業経験</span></h3>
+        <p>営業全般からPMまでを担当。</p>
+      </li>
+    </ul>
+
+    <h3 class="section">現在</h3>
+    <ul class="points">
+      <li>
+        <h3>起業に向けて活動中<span class="status status--ongoing">取り組み中</span></h3>
+        <p>経済産業省・NEDOの「NEP 開拓コース」、および大学発スタートアップ支援補助金の支援プログラムを活用し、起業に向けて活動中。</p>
+      </li>
+    </ul>
+  </section>
+</main>
+</body>
+</html>
